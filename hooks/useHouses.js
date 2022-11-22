@@ -31,10 +31,21 @@ const houseArray = [
     
 ]
 
+const bindsArray = [
+    {
+        id: 1,
+        houseId: 1,
+        bidder: "Ferdi",
+        amount: 400000,
+    },
+    
+]
+
 export default function useHouses() {
     const [houses, setHouses] = useState(houseArray);
+    const [bids, setBids] = useState(bindsArray);
     const [loadingState, setLoadingState] = useState(loadingStatus.isLoading);
 
-    return { houses, setHouses, desc };
+    return { houses, setHouses, desc, bids };
 }
 
